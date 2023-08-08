@@ -1,0 +1,33 @@
+<div class="main-container">
+    <div class="titulo-producto">
+    </div>
+    <div class="tabla">
+        <div class="titulos">
+            <h1>PRODUCTOS</h1>
+            <ul>
+                <li>ID</li>
+                <li>Nombre</li>
+                <li>Descripcion</li>
+                <li>Precio</li>
+                <li>Stock</li>
+                <li>Categoria</li>
+            </ul>
+        </div>
+        <div>
+            {{#each productos}}
+            <ul class="producto">
+                <li>{{this.code}}</li>
+                <li><strong>{{this.title}}</strong></li>
+                <li>{{this.description}}</li>
+                <li>$ {{this.price}}</li>
+                <li>{{this.stock}}</li>
+                <li>{{this.category}}</li>
+            </ul>
+            {{/each}}
+        </div>
+
+        <form class="btn-ptr" action="/realTimeProducts">
+            <input type="submit" value="PRODUCTOS EN TIEMPO REAL">
+        </form>
+    </div>
+</div>
